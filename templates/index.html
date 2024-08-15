@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite</title>
+    <!-- Tailwind CSS (using CDN for simplicity) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- HTMX Script -->
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            background-color: #e3e9ef;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+    <div class="container mx-auto text-center mt-12">
+        <!-- Profilbild von Asrudi Usmanov -->
+        <div class="profile-image mt-8 flex justify-center">
+            <img src="/images/kitchen8.jpeg" alt="Asrudi Usmanov" class="rounded-full w-36 h-36">
+        </div>
+        <h1 class="text-4xl font-bold mt-6">Willkommen!</h1>
+        <h2 class="text-2xl mt-4">Ich bin Asrudi, Dein Mann für Küchen</h2>
+
+        <!-- Button zum Anzeigen des Calendly Widgets -->
+        <button id="showCalendly" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded mt-8">
+            Termin buchen
+        </button>
+
+        <!-- Calendly inline widget (zunächst ausgeblendet) -->
+        <div id="calendlyWidget" class="calendly-inline-widget mt-8" data-url="https://calendly.com/lomaliimadaev/30min"
+            style="min-width:320px;height:700px; display:none;"></div>
+
+        <!-- Button zum Anzeigen der Galerie -->
+        <button id="showProjects" class="bg-gray-500 text-white font-semibold py-2 px-4 rounded mt-8">
+            Meine Projekte anzeigen
+        </button>
+
+        <!-- Projekte inline widget (zunächst ausgeblendet) -->
+        <div id="projectsWidget" class="mt-8 hidden">
+            <h3 class="text-3xl font-semibold mb-6">Meine Projekte</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="/images/kitchen1.jpeg" alt="Projekt 1" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen2.jpeg" alt="Projekt 2" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen3.jpeg" alt="Projekt 3" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen4.jpeg" alt="Projekt 4" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen5.jpeg" alt="Projekt 5" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen6.jpeg" alt="Projekt 6" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen7.jpeg" alt="Projekt 7" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen8.jpeg" alt="Projekt 8" class="rounded-lg mb-4 w-full h-auto">
+                <img src="/images/kitchen9.jpeg" alt="Projekt 9" class="rounded-lg mb-4 w-full h-auto">
+            </div>
+        </div>
+
+        <!-- Calendly Script -->
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+
+    <script>
+        // JavaScript, um das Calendly-Widget beim Klicken des Buttons anzuzeigen
+        document.getElementById('showCalendly').addEventListener('click', function () {
+            document.getElementById('calendlyWidget').style.display = 'block';
+            this.style.display = 'none'; // Versteckt den Button nach dem Klicken
+        });
+
+        // JavaScript, um die Projekte-Galerie beim Klicken des Buttons anzuzeigen
+        document.getElementById('showProjects').addEventListener('click', function () {
+            document.getElementById('projectsWidget').style.display = 'block';
+            this.style.display = 'none'; // Versteckt den Button nach dem Klicken
+        });
+    </script>
+
+    <!-- Impressum -->
+    <footer class="bg-gray-200 p-4 mt-auto">
+        <div class="container mx-auto text-center">
+            <p>Impressum: Asrudi Usmanov | Kunreuthstraße 53, 81249 München | Telefon: 017672577501 | E-Mail:
+                asrudi@hotmail.de</p>
+        </div>
+    </footer>
+</body>
+
+</html>
