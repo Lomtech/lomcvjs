@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Startseite</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome für Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    footer {
+      background-color: #cfd9eb;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
+
+    #calendlyWidgetContainer {
+      display: none;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto 0;
+      border: none;
+    }
+
+    #calendlyWidget {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    /* Abstand zwischen dem Projekte-Widget und dem Footer */
+    #projectsWidget {
+      margin-bottom: 50px;
+    }
+
+    /* Fixed position for the Datenschutz icon */
+    .ccm19-icon {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+</nav>
+
+<!-- CCM19 Datenschutz Einbindungscode in the top left corner -->
+<div class="ccm19-icon">
+  <script
+    src="https://cloud.ccm19.de/app.js?apiKey=30a96c5bc50651cecfc8b957d58c571b28870649f3b7dbfd&amp;domain=66bfae7e0db163ea860b10c2"
+    referrerpolicy="origin">
+    </script>
+</div>
+
+<body class="d-flex flex-column align-items-center">
+  <div class="container text-center mt-5">
+    <!-- Profilbild von Asrudi Usmanov -->
+    <div class="profile-image mt-4">
+      <img src="/static/kitchen8.jpeg" alt="Asrudi Usmanov" class="rounded-circle" width="150" height="150">
+    </div>
+    <h1 class="mt-4">Willkommen!</h1>
+    <h2 class="mt-4">Ich bin Asrudi</h2>
+    <h2 class="mt-4">Ihre Küchenmontage, mein Meisterwerk</h2>
+
+
+    <!-- Button zum Anzeigen des Calendly Widgets -->
+    <button id="showCalendly" class="btn btn-light btn-lg mt-4">
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i> Termin buchen
+    </button>
+
+    <!-- Calendly inline widget (zunächst ausgeblendet) -->
+    <div id="calendlyWidgetContainer" class="d-flex justify-content-center align-items-center">
+      <div id="calendlyWidget" class="calendly-inline-widget" data-url="https://calendly.com/lomaliimadaev/60min"></div>
+    </div>
+
+    <!-- Projekte inline widget (direkt sichtbar) -->
+    <div id="projectsWidget" class="mt-4">
+      <h3 class="mb-4">Meine Projekte</h3>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen1.jpeg" alt="Projekt 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen2.jpeg" alt="Projekt 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen3.jpeg" alt="Projekt 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen4.jpeg" alt="Projekt 4" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen5.jpeg" alt="Projekt 5" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen6.jpeg" alt="Projekt 6" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen7.jpeg" alt="Projekt 7" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen8.jpeg" alt="Projekt 8" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="/static/kitchen9.jpeg" alt="Projekt 9" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendly Script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <script>
+    // JavaScript, um das Calendly-Widget beim Klicken des Buttons anzuzeigen
+    document.getElementById('showCalendly').addEventListener('click', function () {
+      document.getElementById('calendlyWidgetContainer').style.display = 'block';
+      document.getElementById('calendlyWidget').style.display = 'block';
+      this.style.display = 'none'; // Versteckt den Button nach dem Klicken
+    });
+  </script>
+
+  <!-- Impressum -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Asrudi Usmanov</li>
+      <li class="breadcrumb-item active" aria-current="page">Kunreuthstraße 53, 81249 München</li>
+      <li class="breadcrumb-item active" aria-current="page">Telefon: 017672577501</li>
+      <li class="breadcrumb-item active" aria-current="page">E-Mail:
+        asrudi@hotmail.de</li>
+      <li class="breadcrumb-item"><a href="/datenschutz">Datenschutzerklärung</a></li>
+    </ol>
+  </nav>
+
+</html>
