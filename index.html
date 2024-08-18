@@ -3,101 +3,58 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Startseite</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Font Awesome für Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Link zur CSS-Datei -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- As a link -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">Home</a>
-</nav>
-
-  <!-- CCM19 Datenschutz Einbindungscode -->
-<script
-    src="https://cloud.ccm19.de/app.js?apiKey=30a96c5bc50651cecfc8b957d58c571b28870649f3b7dbfd&amp;domain=66bfae7e0db163ea860b10c2"
-    referrerpolicy="origin">
-</script>
-
-<body class="d-flex flex-column align-items-center">
+<body>
   <div class="container text-center mt-5">
-    <!-- Profilbild von Asrudi Usmanov -->
+    <!-- Profilbild -->
     <div class="profile-image mt-4">
-      <img src="/static/kitchen8.jpeg" alt="Asrudi Usmanov" class="rounded-circle" width="150" height="150">
+      <img src="static/kitchen8.jpeg" alt="Asrudi Usmanov" class="rounded-circle" width="150" height="150">
     </div>
     <h1 class="mt-4">Willkommen!</h1>
-    <h2 class="mt-4">Ich bin Asrudi</h2>
-    <h2 class="mt-4">Ihre Küchenmontage, mein Meisterwerk</h2>
-
+    <h2 class="mt-1">Ich bin Asrudi, Dein Mann für Küchen</h2>
 
     <!-- Button zum Anzeigen des Calendly Widgets -->
-    <button id="showCalendly" class="btn btn-light btn-lg mt-4">
+    <button id="showCalendly" class="btn btn-light btn-lg">
       <i class="fas fa-calendar-alt" aria-hidden="true"></i> Termin buchen
     </button>
 
     <!-- Calendly inline widget (zunächst ausgeblendet) -->
-    <div id="calendlyWidgetContainer" class="d-flex justify-content-center align-items-center">
+    <div id="calendlyWidgetContainer" class="hidden">
       <div id="calendlyWidget" class="calendly-inline-widget" data-url="https://calendly.com/lomaliimadaev/60min"></div>
     </div>
 
-    <!-- Projekte inline widget (direkt sichtbar) -->
-    <div id="projectsWidget" class="mt-4">
-      <h3 class="mb-4">Meine Projekte</h3>
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen1.jpeg" alt="Projekt 1" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen2.jpeg" alt="Projekt 2" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen3.jpeg" alt="Projekt 3" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen4.jpeg" alt="Projekt 4" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen5.jpeg" alt="Projekt 5" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen6.jpeg" alt="Projekt 6" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen7.jpeg" alt="Projekt 7" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen8.jpeg" alt="Projekt 8" class="img-fluid rounded">
-        </div>
-        <div class="col-md-4 mb-3">
-          <img src="/static/kitchen9.jpeg" alt="Projekt 9" class="img-fluid rounded">
-        </div>
+    <!-- Projekte -->
+    <div id="projectsWidget" class="mt-8">
+      <h3 class="text-3xl font-semibold mb-6">Meine Projekte</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-4">
+        <img src="static/kitchen1.jpeg" alt="Projekt 1" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen2.jpeg" alt="Projekt 2" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen3.jpeg" alt="Projekt 3" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen4.jpeg" alt="Projekt 4" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen5.jpeg" alt="Projekt 5" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen6.jpeg" alt="Projekt 6" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen7.jpeg" alt="Projekt 7" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen8.jpeg" alt="Projekt 8" class="rounded-lg mb-4 w-full h-auto object-cover">
+        <img src="static/kitchen9.jpeg" alt="Projekt 9" class="rounded-lg mb-4 w-full h-auto object-cover">
       </div>
     </div>
   </div>
 
-  <!-- Calendly Script -->
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-
   <!-- Impressum -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Asrudi Usmanov</li>
-      <li class="breadcrumb-item active" aria-current="page">Kunreuthstraße 53, 81249 München</li>
-      <li class="breadcrumb-item active" aria-current="page">Telefon: 017672577501</li>
-      <li class="breadcrumb-item active" aria-current="page">E-Mail:
-        asrudi@hotmail.de</li>
-      <li class="breadcrumb-item"><a href="datenschutz.html">Datenschutzerklärung</a></li>
-    </ol>
-  </nav>
+  <footer class="bg-gray-400 p-4 mt-auto">
+    <div class="container mx-auto text-center">
+      <p>Impressum: Asrudi Usmanov | Kunreuthstraße 53, 81249 München | Telefon: 017672577501 | E-Mail: asrudi@hotmail.de</p>
+      <p><a href="datenschutz.html" class="text-blue-500 underline">Datenschutzerklärung</a></p>
+    </div>
+  </footer>
 
-    <!-- JavaScript-Datei -->
-    <script src="js/script.js"></script>
+  <!-- JavaScript-Datei -->
+  <script src="js/script.js"></script>
+</body>
 
 </html>
