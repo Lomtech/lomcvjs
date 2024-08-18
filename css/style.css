@@ -1,67 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .profile-image img {body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .profile-image img {
-    border-radius: 50%;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  #calendlyWidgetContainer {
-    display: none; /* Versteckt das Widget standardmäßig */
-    margin-top: 20px;
-  }
-  
-  #projectsWidget img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-    border-radius: 50%;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  #calendlyWidgetContainer {
-    display: none; /* Versteckt das Widget standardmäßig */
-    margin-top: 20px;
-  }
-  
-  #projectsWidget img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+footer {
+background-color: #cfd9eb;
+padding: 10px 0;
+text-align: center;
+width: 100%;
+position: relative;
+bottom: 0;
+left: 0;
+}
+
+#calendlyWidgetContainer {
+display: none;
+width: 100%;
+max-width: 600px;
+margin: 20px auto 0;
+border: none;
+}
+
+#calendlyWidget {
+display: none;
+width: 100%;
+height: 100vh;
+border: none;
+}
+
+/* Abstand zwischen dem Projekte-Widget und dem Footer */
+#projectsWidget {
+margin-bottom: 50px;
+}
