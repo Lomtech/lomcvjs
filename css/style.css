@@ -1,35 +1,49 @@
 body {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-}
-
-footer {
-background-color: #cfd9eb;
-padding: 10px 0;
-text-align: center;
-width: 100%;
-position: relative;
-bottom: 0;
-left: 0;
-}
-
-#calendlyWidgetContainer {
-display: none;
-width: 100%;
-max-width: 600px;
-margin: 20px auto 0;
-border: none;
-}
-
-#calendlyWidget {
-display: none;
-width: 100%;
-height: 100vh;
-border: none;
-}
-
-/* Abstand zwischen dem Projekte-Widget und dem Footer */
-#projectsWidget {
-margin-bottom: 50px;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    
+    footer {
+    background-color: #cfd9eb;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    }
+    
+    #calendlyWidgetContainer {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    border: none;
+    }
+    
+    #calendlyWidget {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    }
+    
+    /* Abstand zwischen dem Projekte-Widget und dem Footer */
+    #projectsWidget {
+    margin-bottom: 50px;
+    }
+    
+    /* Bildgröße auf 20*20px setzen */
+    #projectLogo {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Container-Trennlinien hinzufügen */
+    #containerDivider {
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
